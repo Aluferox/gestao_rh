@@ -1,6 +1,6 @@
 # gestao_rh
 
-#…or create a new repository on the command line
+…or create a new repository on the command line                                                                                                                      
 echo "# gestao_rh" >> README.md
 git init
 git add README.md
