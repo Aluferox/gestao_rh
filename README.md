@@ -1,7 +1,11 @@
 # gestao_rh
-git init/n
-git add README.md/n
-git commit -m "first commit"/n
-git branch -M main/n
-git remote add origin https://github.com/Aluferox/ssss.git/n
-git push -u origin main/n
+git init                                                                                                                                                             
+git add README.md                                                                                                                                                
+git commit -m "first commit"                                                                                                                                         
+git branch -M main                                                                                                                                                   
+git remote add origin https://github.com/Aluferox/ssss.git                                                                                                           
+git push -u origin main                                                                                                                                                                                                                                                                                                                                             
+…or push an existing repository from the command line                                                                                                               
+git remote add origin https://github.com/Aluferox/ssss.git                                                                                                           
+git branch -M main                                                                                                                                                   
+git push -u origin main                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
