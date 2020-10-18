@@ -4,13 +4,22 @@
 {% block main %}
    <div class="row">
     <div class="col-sm">
-      One of three columns
+      colunas
     </div>
     <div class="col-sm">
-      One of three columns
+      olá {{ usuario.funcionario.nome }}
     </div>
     <div class="col-sm">
-      One of three columns
+      <a href="{% url 'logout' %}">Logout</a>
+<!--        Se ele já tem uma empresa-->
+        {% if usuario.funcionario.empresa %}
+            <a href="">Editar Empresa</a>
+
+        {% else %}
+<!--        Se ele não tivr uma empresa-->
+            <a href=""> Crie Sua Empresa</a>
+        {% endif %}
+
     </div>
   </div>
 {% endblock %}
