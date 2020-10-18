@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}">
-    {% block title %} {% endblock %}
+    <title>{% block title %} {% endblock %}</title>
 </head>
+
 <body>
     <div class="container">
         {% block main %} {% endblock %}
