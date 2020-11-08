@@ -2,12 +2,14 @@
 
 {% load bootstrap %}
 
-{% block title %} Empresa {% endblock %}
+{% block title %} {% endblock %}
 
 {% block main %}
+    Edit
     <form method="post">
         {% csrf_token %}
         {{ form|bootstrap }}
+
         <button type="submit" class="btn btn-info">Salvar</button>
     </form>
 {% endblock %}

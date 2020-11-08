@@ -8,16 +8,18 @@
     </div>
     <div class="col-sm">
       olá {{ usuario.funcionario.nome }}
+        <a href="{% url 'list_funcionarios' %}">Gerenciar Funcionários</a>
+        <a href="{% url 'list_departamentos' %}">Gerenciar Departamentos</a>
     </div>
     <div class="col-sm">
       <a href="{% url 'logout' %}">Logout</a>
 <!--        Se ele já tem uma empresa-->
         {% if usuario.funcionario.empresa %}
-            <a href="">Editar Empresa</a>
+            <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
 
         {% else %}
 <!--        Se ele não tivr uma empresa-->
-            <a href=""> Crie Sua Empresa</a>
+            <a href="{% url 'create_empresa' %}"> Crie Sua Empresa</a>
         {% endif %}
 
     </div>
