@@ -3,7 +3,12 @@
 venv
 gestao_rh/__pycache__/
 apps/__pycache__/
-
+apps/core/__pycache__/
+apps/departamentos/__pycache__/
+apps/documentos/__pycache__/
+apps/empresas/__pycache__/
+apps/funcionarios/__pycache__/
+apps/registro_hora_extra/__pycache__/
 /__pycache__/
 README.md
 .pyc
