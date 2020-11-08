@@ -2,6 +2,8 @@
 *.sqlite3
 venv
 gestao_rh/__pycache__/
+apps/__pycache__/
+
 /__pycache__/
 README.md
 .pyc
