@@ -3,7 +3,7 @@
 
 {% block main %}
     <form method="post">
-        <h1> tem certeza que gostaria de deletar o funcionário {{ funcionario }} </h1>
+        <h1> tem certeza que gostaria de deletar o funcionário {{ object }} </h1>
         {% csrf_token %}
         {{ form }}
         <button type="submit" class="btn btn-danger">Deletar</button>

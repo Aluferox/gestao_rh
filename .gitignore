@@ -9,6 +9,7 @@ apps/documentos/__pycache__/
 apps/empresas/__pycache__/
 apps/funcionarios/__pycache__/
 apps/registro_hora_extra/__pycache__/
+apps/registro_hora_extra/migrations/__pycache__/
 /__pycache__/
 README.md
 .pyc
