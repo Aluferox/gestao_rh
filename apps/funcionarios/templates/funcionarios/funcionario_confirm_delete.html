@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block title %} Deletar {% endblock %}
+
+{% block main %}
+    <form method="post">
+        <h1>Gostaria de deletar o funcionário <strong>{{ object }}</strong> ???</h1>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-danger">Deletar</button>
+    </form>
+ {% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block title %} Criar Hora Extra {% endblock %}
+
+{% block main %}
+
+    <form method="post">
+
+        {% csrf_token %}
+        {{ form |bootstrap }}
+        <button type="submit" class="btn btn-primary">Criar</button>
+    </form>
+    <br> <a href="{% url 'projetos' %}" class="btn btn-success">Projetos</a>
+
+{% endblock %}

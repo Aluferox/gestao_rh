@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block title %} Horas_extras {% endblock %}
+
+{% block main %}
+    {% if   object_list  %}
+        <h1>Horas Extras</h1>
+        {% for horaExtra in object_list %}
+            <a href="{% url 'update_hora_extra' horaExtra.id %}" {{ horaExtra }}>{{ horaExtra }}</a>
+            <a href="{% url 'delete_hora_extra' horaExtra.id %}" class="badge badge-danger">Deletar</a>
+            <br>
+        {% endfor %}
+        <br>
+        <a href="{% url 'create_registro_hora_extra' %}" class="btn btn-info">Criar Hora extra</a>
+    {% else %}
+        <h1>Não existem horas extras no banco de dados!</h1>
+        <a href=" {% url 'create_registro_hora_extra' %}" class="btn btn-info">Criar Hora extra</a>
+    {% endif %}
+       <br><br> <a href="{% url 'projetos' %}" class="btn btn-success">Projetos</a>
+{% endblock %}

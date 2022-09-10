@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Deletar {% endblock %}
+
+{% block main %}
+   <p><h1>Você tem certeza que gostaria de excluir o departamento <strong>{{ object }}</strong>?</h1></p>
+    <form method="post">
+    {% csrf_token %}
+        {{ form }}
+        <button type="submit" class="btn btn-danger">Confirmar</button>
+    </form>
+{% endblock %}

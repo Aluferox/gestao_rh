@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block title %} Funcionários {% endblock %}
+
+{% block main %}
+    <h1>List</h1>
+    <br>
+    {% for funcionario in object_list %}
+        <a href="{% url 'update_funcionario' funcionario.id %}">{{ funcionario }}</a>
+        <a href="{%  url 'delete_funcionario' funcionario.id %}" class="badge badge-danger">Deletar</a> <br>
+    {% endfor %}
+    <a href="{% url 'create_funcionario' %}" class="btn btn-info">Novo</a>
+    <a href="{% url 'projetos' %}" class="btn btn-success">Projetos</a>
+{% endblock %}
