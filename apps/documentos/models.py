@@ -10,7 +10,7 @@ class Documento(models.Model):
 
 
     def get_absolute_url(self):
-        return reverse('update-funcionario', args=[self.pertence_id])
+        return reverse('update_funcionario', args=[self.pertence_id])
 
     def __str__(self):
         return self.descricao

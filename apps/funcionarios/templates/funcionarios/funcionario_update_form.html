@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap %}
+
+{% block title %} Funcionário {% endblock %}
+
+{% block main %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form | bootstrap }}
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+    <br> <a href="{% url 'create_document' object.id %}" class="btn btn-info">Adiconar Documento</a>
+     <a href="{% url 'projetos' %}" class="btn btn-success">Projetos</a>
+
+    <br><br>
+    <h2>Documentos</h2>
+    <ul>
+        {% for documento in object.documento_set.all %}
+            <li>
+                <a href="{{ documento.arquivo.url }} "> {{ documento.descricao }}  </a><br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

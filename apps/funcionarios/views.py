@@ -16,6 +16,7 @@ class FuncionariosList(ListView):
 class FuncionarioEdit(UpdateView):
     model = Funcionario
     fields = ['nome','departamento']
+    template_name_suffix = '_update_form'
 
 
 class FuncionarioDelete(DeleteView):
