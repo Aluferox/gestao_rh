@@ -5,23 +5,24 @@
 {% block main %}
 
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm"><a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+
       <a href="{% url 'projetos' %}" class="btn btn-success">Projetos</a>
     </div>
     <div class="col-sm">
-         {{ usuario.funcionario.nome }}
-        <a href="{% url 'list_funcionario' %}">Gerenciar Funcionários</a>
-        <a href="{% url 'list-departamentos' %}">Gerenciar Departamentos</a>
-        <a href="{% url 'list_hora_extra' %}">Gerenciar Banco de Horas</a>
+        <h3>Funcionário: {{ usuario.funcionario.nome }}</h3>
+        <a href="{% url 'list_funcionario' %}" class="btn btn-info">Gerenciar Funcionários</a><br><br>
+        <a href="{% url 'list-departamentos' %}" class="btn btn-info">Gerenciar Departamentos</a><br> <br>
+        <a href="{% url 'list_hora_extra' %}" class="btn btn-info">Gerenciar Banco de Horas</a>
     </div>
     <div class="col-sm">
-      <a href="{% url 'logout' %}">Logout</a>
-
-
         {% if usuario.funcionario.empresa %}
-            <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}">Editar Empresa</a>
+            <h3>Empresa: {{ usuario.funcionario.empresa }}</h3>
+            <a href="{% url 'edit_empresa' usuario.funcionario.empresa.id %}" class="btn btn-info">
+                Editar Empresa
+            </a><br>
         {% else %}
-            <a href="{% url 'create_empresa' %}"> Criar Empresa</a>
+            <a href="{% url 'create_empresa' %}" class="btn btn-info"> Criar Empresa</a>
         {% endif %}
     </div>
   </div>

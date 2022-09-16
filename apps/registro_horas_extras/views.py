@@ -14,7 +14,6 @@ class HoraExtraList(ListView):
 
 class HoraExtraEdit(UpdateView):
     model = RegistroHoraExtra
-    success_url = reverse_lazy('list_hora_extra')
     template_name_suffix = '_update_form'
     form_class = RegistroHoraExtraForm
 
@@ -26,12 +25,12 @@ class HoraExtraEdit(UpdateView):
 
 class HoraExtraDelete(DeleteView):
     model = RegistroHoraExtra
-    success_url = reverse_lazy('list_hora_extra')
+    success_url = reverse_lazy('list_funcionario')
 
 
 class HoraExtraNovo(CreateView):
     model = RegistroHoraExtra
-    success_url = reverse_lazy('list_hora_extra')
+    # success_url = reverse_lazy('list_hora_extra')
     template_name_suffix = '_create_form'
     form_class = RegistroHoraExtraForm
 

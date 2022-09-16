@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load bootstrap %}
 
 {% block title %} Departamento novo {% endblock %}
 
 {% block main %}
     <form method="post">
         {% csrf_token %}
-        {{ form }}
-        <button type="submit">Salvar</button>
-    </form>
+        {{ form | bootstrap  }}
+        <button type="submit" class="btn btn-primary">Salvar</button>
     <a href="{% url 'projetos' %}" class="btn btn-success">Projetos</a>
+    </form>
 {% endblock %}
